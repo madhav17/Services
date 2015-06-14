@@ -18,7 +18,11 @@ class UserController {
     }
 
     def withTran(){
+        render userService.withTran()
+    }
 
+    def notTranFromTran(){
+        render userService.notTranFromTran()
     }
 
 }
