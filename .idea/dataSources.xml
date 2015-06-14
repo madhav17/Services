@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1473780453">
+    <data-source source="LOCAL" name="Services dev" uuid="0f014861-c455-4c7a-bbc7-39517d57a605">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/gorm2?autoReconnect=true&amp;useUnicode=yes&amp;characterEncoding=UTF-8</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc3dfcddfcedfcfdfccdfcbdfdfdfc6dfde</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
