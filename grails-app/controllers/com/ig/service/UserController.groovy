@@ -25,4 +25,8 @@ class UserController {
         render userService.notTranFromTran()
     }
 
+    def tranFromNotTran(){
+        render userService.tranFromNotTran()
+    }
+
 }

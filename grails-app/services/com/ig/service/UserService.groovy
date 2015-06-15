@@ -14,7 +14,7 @@ class UserService {
         (1..2).each {
             userList.add(new User(name: "Alok ${it}").save())
         }
-        throw new RuntimeException("Runtime Exception")
+//        throw new RuntimeException("Runtime Exception")
         userList.add(new User(name:"Aman").save())
         return userList
     }
@@ -76,6 +76,21 @@ class UserService {
         }
 //        throw new RuntimeException("Runtime Exception From Non Transactional")
         return userList
+    }
+
+    @NotTransactional
+    List<User> tranFromNotTran(){
+
+        List<User> userList = []
+        (1..2).each {
+            userList.add(new User(name: "Imran ${it}").save())
+        }
+
+//         throw new RuntimeException("Runtime Exception From Not Transactional Before Method Calling")
+        userList.add(createUsers())
+//         throw new RuntimeException("Runtime Exception From Not Transactional After Method Calling")
+        return userList.flatten()
+
     }
 
 }

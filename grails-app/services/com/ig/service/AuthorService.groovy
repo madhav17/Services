@@ -22,7 +22,8 @@ class AuthorService {
     void runtimeException() {
         new Author(name: "Author x", age: 67, address: "Anand Vihar").save()
         new Author(name: "Author x", age: 67, address: "Anand Vihar").save()
-        throw new RuntimeException("Runtime Exception")
+//        throw new RuntimeException("Runtime Exception")
+//        10/0
         new Author(name: "Author x", age: 67, address: "Anand Vihar").save()
     }
 
