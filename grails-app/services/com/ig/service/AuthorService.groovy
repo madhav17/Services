@@ -1,5 +1,7 @@
 package com.ig.service
 
+import java.sql.SQLException
+
 
 class AuthorService {
 
@@ -10,10 +12,10 @@ class AuthorService {
         new Author(name: "New Author Via Service", age: 77, address: "Manak Vihar").save()
     }
 
-    void nonRuntimeException() throws IOException {
+    void nonRuntimeException() {
         new Author(name: "Author x", age: 67, address: "Anand Vihar").save()
         new Author(name: "Author x", age: 67, address: "Anand Vihar").save()
-        throw new IOException("IO Exception")
+        throw new SQLException("SQL Exception")
         new Author(name: "Author x", age: 67, address: "Anand Vihar").save()
     }
 
