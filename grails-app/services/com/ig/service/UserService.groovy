@@ -35,6 +35,8 @@ class UserService {
     @Transactional(readOnly = true)
     void readyOnly() {
         User user = new User(name:"Amit").save()
+        user.errors
+//        User.read(1)
     }
 
     @NotTransactional
@@ -51,7 +53,7 @@ class UserService {
             }
 //            throw new RuntimeException("Runtime Exception Inside With Transaction")
         }
-//        throw new RuntimeException("Runtime Exception")
+        throw new RuntimeException("Runtime Exception")
         return userList
     }
 
@@ -64,8 +66,8 @@ class UserService {
         }
 //        throw new RuntimeException("Runtime Exception From Transactional Before Method Calling")
         userList.add(intializeUsers())
-//        throw new RuntimeException("Runtime Exception From Transactional Before Method After")
-        return userList.flatten()
+        throw new RuntimeException("Runtime Exception From Transactional Before Method After")
+         return userList.flatten()
     }
 
     @NotTransactional
